@@ -102,4 +102,17 @@ eksctl create addon --name aws-ebs-csi-driver --cluster <YOUR-CLUSTER-NAME> --se
 ```
 Note: If your cluster is in the AWS GovCloud (US-East) or AWS GovCloud (US-West) AWS Regions, then replace arn:aws: with arn:aws-us-gov:.
 
+## Configuring Helm
+Helm is a package manager for Kubernetes that facilitates the deployment and management of applications.
+Helm v2.x
+```
+$ helm install --name robot-shop --namespace robot-shop 
+```
+Helm v3.x
+```
+$ kubectl create ns robot-shop
+$ helm install robot-shop --namespace robot-shop
+```
+
+
 
